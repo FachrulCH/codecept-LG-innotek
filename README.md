@@ -1,2 +1,2 @@
 # codecept-LG-innotek
-Belajar Codeception
+Belajar implementasi Codeception di projek LG innotek
