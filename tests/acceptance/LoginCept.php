@@ -6,8 +6,9 @@ $I->wantTo('Login to website LG');
 $I->amOnPage('/');
 $I->see('Sign in to start your session');
 
-$faker = Faker\Factory::create('id_ID');
-//$username = $faker->name;
+// inisiasi objek faker yg indonesia
+$user = Faker\Factory::create('id_ID');
+//$username = $user->name;
 $username = 'admin';
 
 $I->fillField('usermail', $username);
@@ -19,7 +20,7 @@ $I->seeInCurrentUrl('/dashboard');
 $I->dontSeeElement('/html/body/div[2]/header/nav/div/ul/li/ul/li[1]/p/small');
 $I->click('/html/body/div[2]/header/nav/div/ul/li/a');
 $I->seeElement('/html/body/div[2]/header/nav/div/ul/li/ul/li[1]/p/small');
-$I->click('/html/body/div[2]/aside/div/section/ul/li[4]/a'); // customer
+$I->click('/html/body/div[2]/aside/div/section/ul/li[4]/a'); // side menu customer
 $I->see('Data Customers');
 $I->dontSee('Master Customer');
 $I->dontSeeElement('#mdl-tambah');
@@ -28,15 +29,16 @@ $I->click('#btn-add'); // add
 $I->waitForElementVisible('#mdl-tambah');
 $I->see('Master Customer');
 
-for($a = 1; $a < 5; $a++){
 // isi data customer
-$I->fillField('#cust-name', $faker->name);
-$I->fillField('#cust-pass', $faker->password);
-$I->fillField('#cust-addr', $faker->address);
-$I->fillField('#cust-email', $faker->email);
-$I->fillField('#cust-telp', $faker->phoneNumber);
-$I->fillField('#cust-cp', $faker->domainName);
-$I->wait(1);
+// test looping di skenario create user baru
+for ($a = 1; $a < 5; $a++) {
+    $I->fillField('#cust-name', $user->name);
+    $I->fillField('#cust-pass', $user->password);
+    $I->fillField('#cust-addr', $user->address);
+    $I->fillField('#cust-email', $user->email);
+    $I->fillField('#cust-telp', $user->phoneNumber);
+    $I->fillField('#cust-cp', $user->domainName);
+    $I->wait(1);
 }
 
 $I->click('Save');
