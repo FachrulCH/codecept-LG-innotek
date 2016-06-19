@@ -1,0 +1,575 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+        <meta charset="UTF-8" />
+        <title>LG: innotek</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+        <!-- Bootstrap 3.3.2 -->
+        <link href="http://localhost:80/PRJ/lg/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- Font Awesome Icons -->
+        <link href="http://localhost:80/PRJ/lg/assets/plugins/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Ionicons -->
+        <link href="http://localhost:80/PRJ/lg/assets/plugins/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- DATA TABLES -->
+        <link href="http://localhost:80/PRJ/lg/assets/plugins/datatables/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- Theme style -->
+        <link href="http://localhost:80/PRJ/lg/assets/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://localhost:80/PRJ/lg/assets/dist/css/skins/skin-red.css" rel="stylesheet" type="text/css" />
+        <link href="http://localhost:80/PRJ/lg/assets/css/gaya.css" rel="stylesheet" type="text/css" />
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- jQuery 2.1.3 -->
+        <script src="http://localhost:80/PRJ/lg/assets/plugins/jQuery/jQuery-2.1.3.min.js"></script>
+        <!-- Bootstrap 3.3.2 JS -->
+        <script src="http://localhost:80/PRJ/lg/assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- SlimScroll 1.3.0 -->
+        <script src="http://localhost:80/PRJ/lg/assets/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>    
+        <!-- FastClick -->
+        <script src="http://localhost:80/PRJ/lg/assets/plugins/fastclick/fastclick.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="http://localhost:80/PRJ/lg/assets/dist/js/app.min.js" type="text/javascript"></script>
+        <!-- DATA TABES SCRIPT -->
+        <script src="http://localhost:80/PRJ/lg/assets/plugins/datatables/datatables.min.js" type="text/javascript"></script>
+        <script src="http://localhost:80/PRJ/lg/assets/plugins/datatables/dataTables.bootstrap.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            BASE_URL = "http://localhost:80/PRJ/lg/";
+            function loading_on() {
+                $('#modal-loading').modal('show');
+            }
+
+            function loading_off() {
+                setTimeout(function () {
+                    $('#modal-loading').modal('hide');
+                }, 500);
+            }
+        </script>
+    </head>
+    <body class="skin-red fixed modal-open" style="padding-right: 15px;">
+
+        <div class="modal" style="display: none" id="modal-loading">
+            <div class="center">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+                <h3>Mohon tunggu...</h3>
+            </div>
+        </div>
+
+        <div class="wrapper">
+
+            <header class="main-header">
+                <!-- Logo -->
+                <a href="http://localhost:80/PRJ/lg/" class="logo"><img src="http://localhost:80/PRJ/lg/assets/img/logo-innotek.png" alt="Lg:innotek" /></a>
+                <!-- Header Navbar: style can be found in header.less -->
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <i id="motto">Inside your life!</i>
+                    <div class="navbar-custom-menu">
+    <ul class="nav navbar-nav">
+        <!-- Messages: style can be found in dropdown.less-->
+<!--        <li class="dropdown messages-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-envelope-o"></i>
+                <span class="label label-success">4</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="header">You have 4 messages</li>
+                <li>
+                     inner menu: contains the actual data 
+                    <ul class="menu">
+                        <li> start message 
+                            <a href="#">
+                                <div class="pull-left">
+                                    <img src="http://localhost:80/PRJ/lg/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
+                                </div>
+                                <h4>
+                                    Support Team
+                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                </h4>
+                                <p>Why not buy a new awesome theme?</p>
+                            </a>
+                        </li> end message 
+                        <li>
+                            <a href="#">
+                                <div class="pull-left">
+                                    <img src="http://localhost:80/PRJ/lg/assets/dist/img/user3-128x128.jpg" class="img-circle" alt="user image"/>
+                                </div>
+                                <h4>
+                                    AdminLTE Design Team
+                                    <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                </h4>
+                                <p>Why not buy a new awesome theme?</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="pull-left">
+                                    <img src="http://localhost:80/PRJ/lg/assets/dist/img/user4-128x128.jpg" class="img-circle" alt="user image"/>
+                                </div>
+                                <h4>
+                                    Developers
+                                    <small><i class="fa fa-clock-o"></i> Today</small>
+                                </h4>
+                                <p>Why not buy a new awesome theme?</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="pull-left">
+                                    <img src="http://localhost:80/PRJ/lg/assets/dist/img/user3-128x128.jpg" class="img-circle" alt="user image"/>
+                                </div>
+                                <h4>
+                                    Sales Department
+                                    <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                </h4>
+                                <p>Why not buy a new awesome theme?</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="pull-left">
+                                    <img src="http://localhost:80/PRJ/lg/assets/dist/img/user4-128x128.jpg" class="img-circle" alt="user image"/>
+                                </div>
+                                <h4>
+                                    Reviewers
+                                    <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                </h4>
+                                <p>Why not buy a new awesome theme?</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="footer"><a href="#">See All Messages</a></li>
+            </ul>
+        </li>
+         Notifications: style can be found in dropdown.less 
+        <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-bell-o"></i>
+                <span class="label label-warning">10</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="header">You have 10 notifications</li>
+                <li>
+                     inner menu: contains the actual data 
+                    <ul class="menu">
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the page and may cause design problems
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-users text-red"></i> 5 new members joined
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user text-red"></i> You changed your username
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="footer"><a href="#">View all</a></li>
+            </ul>
+        </li>
+         Tasks: style can be found in dropdown.less 
+        <li class="dropdown tasks-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-flag-o"></i>
+                <span class="label label-danger">9</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="header">You have 9 tasks</li>
+                <li>
+                     inner menu: contains the actual data 
+                    <ul class="menu">
+                        <li> Task item 
+                            <a href="#">
+                                <h3>
+                                    Design some buttons
+                                    <small class="pull-right">20%</small>
+                                </h3>
+                                <div class="progress xs">
+                                    <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                        <span class="sr-only">20% Complete</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li> end task item 
+                        <li> Task item 
+                            <a href="#">
+                                <h3>
+                                    Create a nice theme
+                                    <small class="pull-right">40%</small>
+                                </h3>
+                                <div class="progress xs">
+                                    <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                        <span class="sr-only">40% Complete</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li> end task item 
+                        <li> Task item 
+                            <a href="#">
+                                <h3>
+                                    Some task I need to do
+                                    <small class="pull-right">60%</small>
+                                </h3>
+                                <div class="progress xs">
+                                    <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                        <span class="sr-only">60% Complete</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li> end task item 
+                        <li> Task item 
+                            <a href="#">
+                                <h3>
+                                    Make beautiful transitions
+                                    <small class="pull-right">80%</small>
+                                </h3>
+                                <div class="progress xs">
+                                    <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                        <span class="sr-only">80% Complete</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li> end task item 
+                    </ul>
+                </li>
+                <li class="footer">
+                    <a href="#">View all tasks</a>
+                </li>
+            </ul>
+        </li>-->
+        <!-- User Account: style can be found in dropdown.less -->
+        <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="http://localhost:80/PRJ/lg/assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image" />
+                <span class="hidden-xs">admin</span>
+            </a>
+            <ul class="dropdown-menu">
+                <!-- User image -->
+                <li class="user-header">
+                    <img src="http://localhost:80/PRJ/lg/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                    <p>
+                        <b>admin</b>
+                        <small>admin</small>
+                    </p>
+                </li>
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                    <div class="pull-left">
+                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                    </div>
+                    <div class="pull-right">
+                        <a href="http://localhost:80/PRJ/lg/access/logout" class="btn btn-default btn-flat">Sign out</a>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>                </nav>
+            </header>
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 585px;"><section class="sidebar" style="height: 585px; overflow: hidden; width: auto;">
+        <!-- search form -->
+        <br />
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header">NAVIGATION</li>
+            <li>
+                <a href="http://localhost:80/PRJ/lg/dashboard">
+                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                </a>
+            </li>
+                            <li>
+                    <a href="http://localhost:80/PRJ/lg/customer/service">
+                        <i class="fa fa-comments"></i> <span>Customer Service </span>
+                    </a>
+                </li>
+                                <li>
+                    <a href="http://localhost:80/PRJ/lg/customer">
+                        <i class="fa fa-users"></i> <span>Customer</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://localhost:80/PRJ/lg/product">
+                        <i class="fa fa-tags"></i> <span>Product</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://localhost:80/PRJ/lg/employee">
+                        <i class="fa fa-male"></i> <span>Employees</span>
+                    </a>
+                </li>
+                                <li>
+                    <a href="http://localhost:80/PRJ/lg/history/incoming">
+                        <i class="fa fa-user"></i> <span>NG Customer</span>
+                    </a>
+                </li>
+                                <li class="treeview">
+                    <a href="#"><i class="fa fa-history"></i> <span>History</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="http://localhost:80/PRJ/lg/history/ngdata"><i class="fa fa fa-user"></i> Detail NG Data</a></li>
+                        <li><a href="http://localhost:80/PRJ/lg/history/ngcust"><i class="fa fa-user-md"></i> CA Customer</a></li>
+                        <li><a href="http://localhost:80/PRJ/lg/history/ngcar"><i class="fa fa-user-md"></i> CAR</a></li>
+                        <li><a href="http://localhost:80/PRJ/lg/history/pengiriman"><i class="fa fa-user-md"></i> CA Pengiriman</a></li>
+                    </ul>
+                </li>
+                                <li class="treeview">
+                    <a href="#"><i class="fa fa-mortar-board"></i> <span>Analisa</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                                                    <li><a href="http://localhost:80/PRJ/lg/analisa/sp"><i class="fa fa-mortar-board "></i> Surat Perintah Analisa</a></li>
+                                                        <li><a href="http://localhost:80/PRJ/lg/analisa/result"><i class="fa fa-mortar-board "></i> Result Analisa</a></li>
+                                                </ul>
+                </li>
+                
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-clipboard"></i> <span>Report</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="http://localhost:80/PRJ/lg/report/byperiodic"><i class="fa fa-clipboard"></i> Report by Periodic</a></li>
+                            <li><a href="http://localhost:80/PRJ/lg/report/bycust"><i class="fa fa-clipboard"></i> Report by Customer</a></li>
+                            <li><a href="http://localhost:80/PRJ/lg/report/bystatus"><i class="fa fa-clipboard"></i> Report by Status</a></li>
+                            <li><a href="http://localhost:80/PRJ/lg/report/byemployee"><i class="fa fa-clipboard"></i> Report by Employee</a></li>
+                            <li><a href="http://localhost:80/PRJ/lg/report/bymodel"><i class="fa fa-clipboard"></i> Report by Model</a></li>
+
+                        </ul>
+                    </li>
+                    
+        </ul>
+    </section><div class="slimScrollBar" style="width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 585px; background: rgba(0, 0, 0, 0.2);"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+    <!-- /.sidebar -->
+</aside>
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper" style="min-height: 584px;">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        Selamat datang admin!
+                    </h1>
+                </section>
+
+                <!-- Main content -->
+                <section class="content">
+                    <!-- Info boxes --><div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Data Customers</h3>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+                <div id="tbl-customers_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="tbl-customers_length"><label>Show <select name="tbl-customers_length" aria-controls="tbl-customers" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"><div id="tbl-customers_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="tbl-customers" /></label></div></div></div><div class="row"><div class="col-sm-12"><table id="tbl-customers" class="table table-bordered table-striped dataTable no-footer" role="grid" aria-describedby="tbl-customers_info">
+                    <thead>
+                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="tbl-customers" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Customer ID: activate to sort column descending" style="width: 75px;">Customer ID</th><th class="sorting" tabindex="0" aria-controls="tbl-customers" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending" style="width: 98px;">Customer Name</th><th class="sorting" tabindex="0" aria-controls="tbl-customers" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending" style="width: 57px;">Address</th><th class="sorting" tabindex="0" aria-controls="tbl-customers" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 119px;">Email</th><th class="sorting" tabindex="0" aria-controls="tbl-customers" rowspan="1" colspan="1" aria-label="Contact Person: activate to sort column ascending" style="width: 86px;">Contact Person</th><th class="sorting" tabindex="0" aria-controls="tbl-customers" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 75px;">Action</th></tr>
+                    </thead>
+                    <tbody>
+                        
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                                <tr role="row" class="odd">
+                                    <td class="sorting_1">CUS16010</td>
+                                    <td>Musashi</td>
+                                    <td>mm 2100</td>
+                                    <td>musashi@gmail.com</td>
+                                    <td>kdfjalkjfla</td>
+                                    <td>
+                                        <button class="btn btn-warning btn-xs btn-edit" data-idx="0"><i class="fa fa-edit"></i> Edit</button>
+                                        <button class="btn btn-danger btn-xs btn-delete" data-idx="0"><i class="fa fa-trash"></i> Delete</button>
+                                    </td>
+                                </tr><tr role="row" class="even">
+                                    <td class="sorting_1">CUS1606</td>
+                                    <td>Maman</td>
+                                    <td>jl akjfsjflsjl</td>
+                                    <td>alul.cholil@yahoo.com</td>
+                                    <td>kajflajl</td>
+                                    <td>
+                                        <button class="btn btn-warning btn-xs btn-edit" data-idx="1"><i class="fa fa-edit"></i> Edit</button>
+                                        <button class="btn btn-danger btn-xs btn-delete" data-idx="1"><i class="fa fa-trash"></i> Delete</button>
+                                    </td>
+                                </tr><tr role="row" class="odd">
+                                    <td class="sorting_1">CUS1608</td>
+                                    <td>LGEIN</td>
+                                    <td>jl lg eim</td>
+                                    <td>lgein@gmail.com</td>
+                                    <td>maman</td>
+                                    <td>
+                                        <button class="btn btn-warning btn-xs btn-edit" data-idx="2"><i class="fa fa-edit"></i> Edit</button>
+                                        <button class="btn btn-danger btn-xs btn-delete" data-idx="2"><i class="fa fa-trash"></i> Delete</button>
+                                    </td>
+                                </tr><tr role="row" class="even">
+                                    <td class="sorting_1">CUS1609</td>
+                                    <td>Samsung</td>
+                                    <td>mm2100</td>
+                                    <td>samsung@email.com</td>
+                                    <td>Oreo</td>
+                                    <td>
+                                        <button class="btn btn-warning btn-xs btn-edit" data-idx="3"><i class="fa fa-edit"></i> Edit</button>
+                                        <button class="btn btn-danger btn-xs btn-delete" data-idx="3"><i class="fa fa-trash"></i> Delete</button>
+                                    </td>
+                                </tr></tbody>
+                </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="tbl-customers_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="tbl-customers_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="tbl-customers_previous"><a href="#" aria-controls="tbl-customers" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="tbl-customers" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button next disabled" id="tbl-customers_next"><a href="#" aria-controls="tbl-customers" data-dt-idx="2" tabindex="0">Next</a></li></ul></div></div></div></div>
+                <button class="btn btn-success" id="btn-add"> <i class="fa fa-plus"></i> Add</button>
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
+    </div><!-- /.col -->
+</div><!-- /.row -->
+
+<div class="modal fade in" id="mdl-tambah" tabindex="-1" role="dialog" aria-labelledby="mdl-tambah" aria-hidden="false" style="display: block; padding-right: 15px;"><div class="modal-backdrop fade in" style="height: 635px;"></div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="modal-title">Master Customer</h2>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" id="form-customer" action="http://localhost:80/PRJ/lg/customer/save" method="POST">
+                    <div class="form-group">
+                        <label for="cust-id" class="col-sm-4 control-label">Customer ID</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" readonly="" id="cust-id" placeholder="Generated by system" name="id" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cust-name" class="col-sm-4 control-label">Customer Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="cust-name" placeholder="Nama Customer" name="name" required="" maxlength="50" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cust-pass" class="col-sm-4 control-label">Password</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" id="cust-pass" placeholder="Password" name="password" required="" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-4 control-label">Address</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="cust-addr" placeholder="Alamat" name="address" required="" maxlength="150" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cust-email" class="col-sm-4 control-label">Email</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="cust-email" placeholder="customer@email.com" name="email" required="" maxlength="50" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cust-telp" class="col-sm-4 control-label">Telephone</label>
+                        <div class="col-sm-8">
+                            <input type="tel" class="form-control" id="cust-telp" placeholder="telp" name="no_telp" required="" maxlength="15" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cust-cp" class="col-sm-4 control-label">Contact Person</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="cust-cp" placeholder="Custemer Contact" name="contact_person" required="" maxlength="50" />
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-8">
+                            <button type="submit" class="btn btn-default">Save</button>
+                            <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="mdl-hapus" tabindex="-1" role="dialog" aria-labelledby="mdl-hapus" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="modal-title">Confirm</h2>
+            </div>
+            <div class="modal-body">
+                Are you sure to delete this customer?
+            </div>
+            <div class="modal-footer">
+                <form action="http://localhost:80/PRJ/lg/customer/delete" method="POST">
+                    <input type="hidden" id="id-delete" name="id" />
+                    <button class="btn btn-danger" type="submit">Yes</button>
+                <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://localhost:80/PRJ/lg/assets/js/common.js"></script>
+<script type="text/javascript">
+    TABEL.data = [{"id":"CUS16010","name":"Musashi","address":"mm 2100","email":"musashi@gmail.com","telp":null,"contact_person":"kdfjalkjfla","password":"b61fd25a0abd01a16281522a323c9c3d"},{"id":"CUS1606","name":"Maman","address":"jl akjfsjflsjl","email":"alul.cholil@yahoo.com","telp":"908080","contact_person":"kajflajl","password":"4504f64ca186c8b5cc1d3fa0af1e160c"},{"id":"CUS1608","name":"LGEIN","address":"jl lg eim","email":"lgein@gmail.com","telp":null,"contact_person":"maman","password":"74ee55083a714aa3791f8d594fea00c9"},{"id":"CUS1609","name":"Samsung","address":"mm2100","email":"samsung@email.com","telp":null,"contact_person":"Oreo","password":"fe546279a62683de8ca334b673420696"}];
+    $(function () {
+        $("#tbl-customers").DataTable();
+        
+        $("#tbl-customers").on('submit', function(){
+            
+        });
+        
+        $('.btn-delete').on('click', function () {
+            var id = $(this).attr('data-idx');
+            TABEL.pilihan = TABEL.data[id];
+            $('#id-delete').val(TABEL.pilihan.id);
+            $('#mdl-hapus').modal('show');
+        });
+                
+        $('.btn-edit').on('click', function () {
+            var id = $(this).attr('data-idx');
+            TABEL.pilihan = TABEL.data[id];
+            
+            $('#cust-id').val(TABEL.pilihan.id);
+            $('#cust-name').val(TABEL.pilihan.name);
+            $('#cust-pass').val();
+            $('#cust-addr').val(TABEL.pilihan.address);
+            $('#cust-email').val(TABEL.pilihan.email);
+            $('#cust-telp').val(TABEL.pilihan.telp);
+            $('#cust-cp').val(TABEL.pilihan.contact_person);
+            
+            $('#mdl-tambah').modal('show');
+        });
+        
+        $('#btn-add').on('click', function () {
+            $('#mdl-tambah').modal('show');
+        });
+
+    });
+</script>
+</section><!-- /.content -->
+</div><!-- /.content-wrapper -->
+
+<footer class="main-footer">
+    <strong>Copyright © 2016 <a href="#">Denti</a>.</strong> All rights reserved.
+</footer>
+</div><!-- ./wrapper -->
+
+
+</body></html>
