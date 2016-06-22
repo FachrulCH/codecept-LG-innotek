@@ -31,11 +31,14 @@ $I->see('Master Customer');
 
 // isi data customer
 // test looping di skenario create user baru
-for ($a = 1; $a < 5; $a++) {
-    $I->fillField('#cust-name', $user->name);
+$user_email = "";
+for ($a = 1; $a < 3; $a++) {
+    $username = $user->name;
+    $user_email = $user->email;
+    $I->fillField('#cust-name', $username);
     $I->fillField('#cust-pass', $user->password);
     $I->fillField('#cust-addr', $user->address);
-    $I->fillField('#cust-email', $user->email);
+    $I->fillField('#cust-email', $user_email);
     $I->fillField('#cust-telp', $user->phoneNumber);
     $I->fillField('#cust-cp', $user->domainName);
     $I->wait(1);
@@ -43,4 +46,13 @@ for ($a = 1; $a < 5; $a++) {
 
 $I->click('Save');
 
-$I->wait(3);
+$I->wait(1);
+$I->seeInDatabase('lg_customer', ['name' => $username]);
+$I->dontSeeInDatabase('lg_customer', ['name' => $username.'1']);
+$user_db_email = $I->grabFromDatabase('lg_customer','email', ['name' => $username]);
+
+var_dump($user_db_email);
+$I->assertEquals($user_email, $user_db_email);
+$user_db = $I->grabFromDatabase('lg_customer','*', ['name' => $username]);
+var_dump($user_db);
+$I->wait(2);
