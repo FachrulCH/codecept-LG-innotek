@@ -1,0 +1,12 @@
+I WANT TO LOGIN DULU TO WEBSITE LG
+
+I am on page '/' 
+I see 'Sign in to start your session' 
+I fill field 'usermail'," $username" 
+I fill field 'userpass'," 'admin' 
+I wait "1" 
+I click 'Log In' 
+I see 'Selamat datang admin!' 
+I am on page '/customer/service' 
+I click('body > div.wrapper > aside > div > section > ul > li:nth-child "3) > a > span'
+

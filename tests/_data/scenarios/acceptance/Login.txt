@@ -1,0 +1,37 @@
+I WANT TO LOGIN TO WEBSITE LG
+
+I am 'admin' 
+I am on page '/' 
+I see 'Sign in to start your session' 
+I fill field 'usermail'," $username" 
+I fill field 'userpass'," 'admin' 
+I wait "1" 
+I click 'Log In' 
+I see 'Selamat datang admin!' 
+I see in current url '/dashboard' 
+I don't see element '/html/body/div[2]/header/nav/div/ul/li/ul/li[1]/p/small' 
+I click '/html/body/div[2]/header/nav/div/ul/li/a' 
+I see element '/html/body/div[2]/header/nav/div/ul/li/ul/li[1]/p/small' 
+I click '/html/body/div[2]/aside/div/section/ul/li[4]/a' 
+I see 'Data Customers' 
+I don't see 'Master Customer' 
+I don't see element '#mdl-tambah' 
+I click '#btn-add' 
+I wait for element visible '#mdl-tambah' 
+I see 'Master Customer' 
+I fill field '#cust-name'," $username" 
+I fill field '#cust-pass'," $user->password" 
+I fill field '#cust-addr'," $user->address" 
+I fill field '#cust-email'," $user_email" 
+I fill field '#cust-telp'," $user->phoneNumber" 
+I fill field '#cust-cp'," $user->domainName" 
+I wait "1" 
+I click 'Save' 
+I wait "1" 
+I see in database 'lg_customer'," ['name' => $username]" 
+I don't see in database 'lg_customer'," ['name' => $username.'1']" 
+I grab from database 'lg_customer','email'," ['name' => $username]" 
+I assert equals "$user_email"," $user_db_email" 
+I grab from database 'lg_customer','*'," ['name' => $username]" 
+I wait "2"
+
